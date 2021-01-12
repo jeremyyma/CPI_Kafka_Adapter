@@ -1,0 +1,1405 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ComponentMetadata ComponentId="ctype::Adapter/cname::Kafka/vendor::ApacheCamel/version::2.17.4" ComponentName="Kafka" UIElementType="Adapter" IsExtension="false" IsFinal="true" IsPreserves="true" IsDefaultGenerator="true" ComponentDisplayName="Kafka" xmlns:gen="http://www.sap.hci.adk.com/gen" xmlns:bp="http://www.adk.gen/xmlns/blueprint">
+    <Variant VariantName="Kafka Component Sender" VariantId="ctype::AdapterVariant/cname::Kafka/vendor::ApacheCamel/tp::kafka/mp::kafka/direction::Sender" MetadataVersion="2.0" gen:RuntimeComponentBaseUri="kafka" AttachmentBehavior="Preserve">
+        <InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </OutputContent>
+        <Tab id="connection">
+            <GuiLabels guid="f611d2f5-dd63-447a-8b32-3faff7169556">
+                <Label language="EN">Connection</Label>
+                <Label language="DE">Connection</Label>
+            </GuiLabels>
+            <AttributeGroup id="defaultUriParameter">
+                <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">URI Setting</Name>
+                <GuiLabels guid="726e69fd-9cbb-4080-a230-2953a74a1c1b">
+                    <Label language="EN">URI Setting</Label>
+                    <Label language="DE">URI Setting</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>firstUriPart</ReferenceName>
+                    <description>Configure First URI Part</description>
+                </AttributeReference>
+            </AttributeGroup>
+               <AttributeGroup id="KafkaEndpoint">
+                <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Kafka Endpoint</Name>
+                <GuiLabels guid="1fb22751-f5cd-4e92-8b4a-e7b2437b5f65">
+                    <Label language="EN">Kafka Endpoint</Label>
+                    <Label language="DE">Kafka Endpoint</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>consumerRequestTimeoutMs</ReferenceName>
+                    <description>Configure consumerRequestTimeoutMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>kerberosInitCmd</ReferenceName>
+                    <description>Configure kerberosInitCmd</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>workerPoolMaxSize</ReferenceName>
+                    <description>Configure workerPoolMaxSize</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>reconnectBackoffMs</ReferenceName>
+                    <description>Configure reconnectBackoffMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>groupId</ReferenceName>
+                    <description>Configure groupId</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>queueBufferingMaxMessages</ReferenceName>
+                    <description>Configure queueBufferingMaxMessages</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>kerberosRenewJitter</ReferenceName>
+                    <description>Configure kerberosRenewJitter</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>consumersCount</ReferenceName>
+                    <description>Configure consumersCount</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslProvider</ReferenceName>
+                    <description>Configure sslProvider</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>receiveBufferBytes</ReferenceName>
+                    <description>Configure receiveBufferBytes</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>barrierAwaitTimeoutMs</ReferenceName>
+                    <description>Configure barrierAwaitTimeoutMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>serializerClass</ReferenceName>
+                    <description>Configure serializerClass</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>valueDeserializer</ReferenceName>
+                    <description>Configure valueDeserializer</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>saslKerberosServiceName</ReferenceName>
+                    <description>Configure saslKerberosServiceName</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslTruststoreType</ReferenceName>
+                    <description>Configure sslTruststoreType</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>metricReporters</ReferenceName>
+                    <description>Configure metricReporters</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sendBufferBytes</ReferenceName>
+                    <description>Configure sendBufferBytes</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>heartbeatIntervalMs</ReferenceName>
+                    <description>Configure heartbeatIntervalMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>bridgeEndpoint</ReferenceName>
+                    <description>Configure bridgeEndpoint</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>consumerStreams</ReferenceName>
+                    <description>Configure consumerStreams</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>consumerId</ReferenceName>
+                    <description>Configure consumerId</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslKeystoreType</ReferenceName>
+                    <description>Configure sslKeystoreType</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>keySerializerClass</ReferenceName>
+                    <description>Configure keySerializerClass</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>requestRequiredAcks</ReferenceName>
+                    <description>Configure requestRequiredAcks</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>workerPool</ReferenceName>
+                    <description>Configure workerPool</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>fetchWaitMaxMs</ReferenceName>
+                    <description>Configure fetchWaitMaxMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>retries</ReferenceName>
+                    <description>Configure retries</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslKeystorePassword</ReferenceName>
+                    <description>Configure sslKeystorePassword</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslEndpointAlgorithm</ReferenceName>
+                    <description>Configure sslEndpointAlgorithm</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>topic</ReferenceName>
+                    <description>Configure topic</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslProtocol</ReferenceName>
+                    <description>Configure sslProtocol</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>keyDeserializer</ReferenceName>
+                    <description>Configure keyDeserializer</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslKeymanagerAlgorithm</ReferenceName>
+                    <description>Configure sslKeymanagerAlgorithm</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>maxBlockMs</ReferenceName>
+                    <description>Configure maxBlockMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>kerberosBeforeReloginMinTime</ReferenceName>
+                    <description>Configure kerberosBeforeReloginMinTime</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>bufferMemorySize</ReferenceName>
+                    <description>Configure bufferMemorySize</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>producerBatchSize</ReferenceName>
+                    <description>Configure producerBatchSize</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>retryBackoffMs</ReferenceName>
+                    <description>Configure retryBackoffMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>metadataMaxAgeMs</ReferenceName>
+                    <description>Configure metadataMaxAgeMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>configuration</ReferenceName>
+                    <description>Configure configuration</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslCipherSuites</ReferenceName>
+                    <description>Configure sslCipherSuites</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>metricsSampleWindowMs</ReferenceName>
+                    <description>Configure metricsSampleWindowMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>fetchMinBytes</ReferenceName>
+                    <description>Configure fetchMinBytes</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslKeyPassword</ReferenceName>
+                    <description>Configure sslKeyPassword</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>noOfMetricsSample</ReferenceName>
+                    <description>Configure noOfMetricsSample</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>connectionMaxIdleMs</ReferenceName>
+                    <description>Configure connectionMaxIdleMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>maxPartitionFetchBytes</ReferenceName>
+                    <description>Configure maxPartitionFetchBytes</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>lingerMs</ReferenceName>
+                    <description>Configure lingerMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>securityProtocol</ReferenceName>
+                    <description>Configure securityProtocol</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>kerberosRenewWindowFactor</ReferenceName>
+                    <description>Configure kerberosRenewWindowFactor</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>autoCommitIntervalMs</ReferenceName>
+                    <description>Configure autoCommitIntervalMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslTruststorePassword</ReferenceName>
+                    <description>Configure sslTruststorePassword</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>partitioner</ReferenceName>
+                    <description>Configure partitioner</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslEnabledProtocols</ReferenceName>
+                    <description>Configure sslEnabledProtocols</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sessionTimeoutMs</ReferenceName>
+                    <description>Configure sessionTimeoutMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslKeystoreLocation</ReferenceName>
+                    <description>Configure sslKeystoreLocation</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslTruststoreLocation</ReferenceName>
+                    <description>Configure sslTruststoreLocation</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>maxInFlightRequest</ReferenceName>
+                    <description>Configure maxInFlightRequest</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>clientId</ReferenceName>
+                    <description>Configure clientId</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>maxRequestSize</ReferenceName>
+                    <description>Configure maxRequestSize</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslTrustmanagerAlgorithm</ReferenceName>
+                    <description>Configure sslTrustmanagerAlgorithm</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>autoOffsetReset</ReferenceName>
+                    <description>Configure autoOffsetReset</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>requestTimeoutMs</ReferenceName>
+                    <description>Configure requestTimeoutMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>compressionCodec</ReferenceName>
+                    <description>Configure compressionCodec</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>workerPoolCoreSize</ReferenceName>
+                    <description>Configure workerPoolCoreSize</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>batchSize</ReferenceName>
+                    <description>Configure batchSize</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>checkCrcs</ReferenceName>
+                    <description>Configure checkCrcs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>autoCommitEnable</ReferenceName>
+                    <description>Configure autoCommitEnable</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>partitionAssignor</ReferenceName>
+                    <description>Configure partitionAssignor</description>
+                </AttributeReference>
+
+            </AttributeGroup>
+        </Tab>
+    </Variant>
+    <Variant VariantName="Kafka Component Receiver" VariantId="ctype::AdapterVariant/cname::Kafka/vendor::ApacheCamel/tp::kafka/mp::kafka/direction::Receiver" IsRequestResponse="true" MetadataVersion="2.0" gen:RuntimeComponentBaseUri="kafka" AttachmentBehavior="Preserve">
+        <InputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </InputContent>
+        <OutputContent Cardinality="1" Scope="outsidepool" MessageCardinality="1" isStreaming="false">
+            <Content>
+                <ContentType>Any</ContentType>
+                <Schema xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></Schema>
+            </Content>
+        </OutputContent>
+        <Tab id="connection">
+            <GuiLabels guid="7cf595ee-ef2d-449e-bd8e-589c08af69c8">
+                <Label language="EN">Connection</Label>
+                <Label language="DE">Connection</Label>
+            </GuiLabels>
+            <AttributeGroup id="defaultUriParameter">
+                <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">URI Setting</Name>
+                <GuiLabels guid="55c64fdb-2db1-428b-9d9f-4ae2f3c6e674">
+                    <Label language="EN">URI Setting</Label>
+                    <Label language="DE">URI Setting</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>firstUriPart</ReferenceName>
+                    <description>Configure First URI Part</description>
+                </AttributeReference>
+            </AttributeGroup>
+           <AttributeGroup id="KafkaEndpoint">
+                <Name xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Kafka Endpoint</Name>
+                <GuiLabels guid="1fb22751-f5cd-4e92-8b4a-e7b2437b5f65">
+                    <Label language="EN">Kafka Endpoint</Label>
+                    <Label language="DE">Kafka Endpoint</Label>
+                </GuiLabels>
+                <AttributeReference>
+                    <ReferenceName>consumerRequestTimeoutMs</ReferenceName>
+                    <description>Configure consumerRequestTimeoutMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>kerberosInitCmd</ReferenceName>
+                    <description>Configure kerberosInitCmd</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>workerPoolMaxSize</ReferenceName>
+                    <description>Configure workerPoolMaxSize</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>reconnectBackoffMs</ReferenceName>
+                    <description>Configure reconnectBackoffMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>groupId</ReferenceName>
+                    <description>Configure groupId</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>queueBufferingMaxMessages</ReferenceName>
+                    <description>Configure queueBufferingMaxMessages</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>kerberosRenewJitter</ReferenceName>
+                    <description>Configure kerberosRenewJitter</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>consumersCount</ReferenceName>
+                    <description>Configure consumersCount</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslProvider</ReferenceName>
+                    <description>Configure sslProvider</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>receiveBufferBytes</ReferenceName>
+                    <description>Configure receiveBufferBytes</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>barrierAwaitTimeoutMs</ReferenceName>
+                    <description>Configure barrierAwaitTimeoutMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>serializerClass</ReferenceName>
+                    <description>Configure serializerClass</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>valueDeserializer</ReferenceName>
+                    <description>Configure valueDeserializer</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>saslKerberosServiceName</ReferenceName>
+                    <description>Configure saslKerberosServiceName</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslTruststoreType</ReferenceName>
+                    <description>Configure sslTruststoreType</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>metricReporters</ReferenceName>
+                    <description>Configure metricReporters</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sendBufferBytes</ReferenceName>
+                    <description>Configure sendBufferBytes</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>heartbeatIntervalMs</ReferenceName>
+                    <description>Configure heartbeatIntervalMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>bridgeEndpoint</ReferenceName>
+                    <description>Configure bridgeEndpoint</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>consumerStreams</ReferenceName>
+                    <description>Configure consumerStreams</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>consumerId</ReferenceName>
+                    <description>Configure consumerId</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslKeystoreType</ReferenceName>
+                    <description>Configure sslKeystoreType</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>keySerializerClass</ReferenceName>
+                    <description>Configure keySerializerClass</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>requestRequiredAcks</ReferenceName>
+                    <description>Configure requestRequiredAcks</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>workerPool</ReferenceName>
+                    <description>Configure workerPool</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>fetchWaitMaxMs</ReferenceName>
+                    <description>Configure fetchWaitMaxMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>retries</ReferenceName>
+                    <description>Configure retries</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslKeystorePassword</ReferenceName>
+                    <description>Configure sslKeystorePassword</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslEndpointAlgorithm</ReferenceName>
+                    <description>Configure sslEndpointAlgorithm</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>topic</ReferenceName>
+                    <description>Configure topic</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslProtocol</ReferenceName>
+                    <description>Configure sslProtocol</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>keyDeserializer</ReferenceName>
+                    <description>Configure keyDeserializer</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslKeymanagerAlgorithm</ReferenceName>
+                    <description>Configure sslKeymanagerAlgorithm</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>maxBlockMs</ReferenceName>
+                    <description>Configure maxBlockMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>kerberosBeforeReloginMinTime</ReferenceName>
+                    <description>Configure kerberosBeforeReloginMinTime</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>bufferMemorySize</ReferenceName>
+                    <description>Configure bufferMemorySize</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>producerBatchSize</ReferenceName>
+                    <description>Configure producerBatchSize</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>retryBackoffMs</ReferenceName>
+                    <description>Configure retryBackoffMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>metadataMaxAgeMs</ReferenceName>
+                    <description>Configure metadataMaxAgeMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>configuration</ReferenceName>
+                    <description>Configure configuration</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslCipherSuites</ReferenceName>
+                    <description>Configure sslCipherSuites</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>metricsSampleWindowMs</ReferenceName>
+                    <description>Configure metricsSampleWindowMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>fetchMinBytes</ReferenceName>
+                    <description>Configure fetchMinBytes</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslKeyPassword</ReferenceName>
+                    <description>Configure sslKeyPassword</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>noOfMetricsSample</ReferenceName>
+                    <description>Configure noOfMetricsSample</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>connectionMaxIdleMs</ReferenceName>
+                    <description>Configure connectionMaxIdleMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>maxPartitionFetchBytes</ReferenceName>
+                    <description>Configure maxPartitionFetchBytes</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>lingerMs</ReferenceName>
+                    <description>Configure lingerMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>securityProtocol</ReferenceName>
+                    <description>Configure securityProtocol</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>kerberosRenewWindowFactor</ReferenceName>
+                    <description>Configure kerberosRenewWindowFactor</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>autoCommitIntervalMs</ReferenceName>
+                    <description>Configure autoCommitIntervalMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslTruststorePassword</ReferenceName>
+                    <description>Configure sslTruststorePassword</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>partitioner</ReferenceName>
+                    <description>Configure partitioner</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslEnabledProtocols</ReferenceName>
+                    <description>Configure sslEnabledProtocols</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sessionTimeoutMs</ReferenceName>
+                    <description>Configure sessionTimeoutMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslKeystoreLocation</ReferenceName>
+                    <description>Configure sslKeystoreLocation</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslTruststoreLocation</ReferenceName>
+                    <description>Configure sslTruststoreLocation</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>maxInFlightRequest</ReferenceName>
+                    <description>Configure maxInFlightRequest</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>clientId</ReferenceName>
+                    <description>Configure clientId</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>maxRequestSize</ReferenceName>
+                    <description>Configure maxRequestSize</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>sslTrustmanagerAlgorithm</ReferenceName>
+                    <description>Configure sslTrustmanagerAlgorithm</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>autoOffsetReset</ReferenceName>
+                    <description>Configure autoOffsetReset</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>requestTimeoutMs</ReferenceName>
+                    <description>Configure requestTimeoutMs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>compressionCodec</ReferenceName>
+                    <description>Configure compressionCodec</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>workerPoolCoreSize</ReferenceName>
+                    <description>Configure workerPoolCoreSize</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>batchSize</ReferenceName>
+                    <description>Configure batchSize</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>checkCrcs</ReferenceName>
+                    <description>Configure checkCrcs</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>autoCommitEnable</ReferenceName>
+                    <description>Configure autoCommitEnable</description>
+                </AttributeReference>
+ <AttributeReference>
+                    <ReferenceName>partitionAssignor</ReferenceName>
+                    <description>Configure partitionAssignor</description>
+                </AttributeReference>
+
+            </AttributeGroup>
+        </Tab>
+    </Variant>
+    <AttributeMetadata>
+        <Name>firstUriPart</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Default></Default>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="1656c467-647b-47d3-84de-80d00ae20d36">
+            <Label language="EN">First URI Part</Label>
+            <Label language="DE">First URI Part</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+    <AttributeMetadata>
+        <Name>consumerRequestTimeoutMs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="7e9dda80-b9e3-4aa9-bae7-f5e4f9e6d16c">
+            <Label language="EN">consumerRequestTimeoutMs</Label>
+            <Label language="DE">consumerRequestTimeoutMs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>kerberosInitCmd</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="36ea57f7-2c59-40ed-8286-01bcea45d5df">
+            <Label language="EN">kerberosInitCmd</Label>
+            <Label language="DE">kerberosInitCmd</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>workerPoolMaxSize</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="24bff767-9786-4943-9e86-0b104a11fbf2">
+            <Label language="EN">workerPoolMaxSize</Label>
+            <Label language="DE">workerPoolMaxSize</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>reconnectBackoffMs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="3dc696ef-d0c1-4249-8e64-f280120a712a">
+            <Label language="EN">reconnectBackoffMs</Label>
+            <Label language="DE">reconnectBackoffMs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>groupId</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="0f9b9f32-6452-4d4b-9bcd-2a01e6647340">
+            <Label language="EN">groupId</Label>
+            <Label language="DE">groupId</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>queueBufferingMaxMessages</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="b619e1aa-3d70-4167-bd5b-1f149c92ba07">
+            <Label language="EN">queueBufferingMaxMessages</Label>
+            <Label language="DE">queueBufferingMaxMessages</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>kerberosRenewJitter</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="5bd7e8a9-e67f-4bb4-875c-ce38fe57a261">
+            <Label language="EN">kerberosRenewJitter</Label>
+            <Label language="DE">kerberosRenewJitter</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>consumersCount</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:integer</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="8abd86aa-dba0-4b2b-986c-59560141f3ce">
+            <Label language="EN">consumersCount</Label>
+            <Label language="DE">consumersCount</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sslProvider</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="40eaad04-b77e-4525-83a4-338a302df4c9">
+            <Label language="EN">sslProvider</Label>
+            <Label language="DE">sslProvider</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>receiveBufferBytes</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="b2ba93aa-c5f5-4f89-ad6b-3f285483b761">
+            <Label language="EN">receiveBufferBytes</Label>
+            <Label language="DE">receiveBufferBytes</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>barrierAwaitTimeoutMs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:integer</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="9a76af3e-db0f-4806-a459-af263798977b">
+            <Label language="EN">barrierAwaitTimeoutMs</Label>
+            <Label language="DE">barrierAwaitTimeoutMs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>serializerClass</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="654e5c80-9578-4fcd-8261-20d4d282f80e">
+            <Label language="EN">serializerClass</Label>
+            <Label language="DE">serializerClass</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>valueDeserializer</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="70243bec-13ca-4907-b8bf-e8cf9b7061ca">
+            <Label language="EN">valueDeserializer</Label>
+            <Label language="DE">valueDeserializer</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>saslKerberosServiceName</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="ffc369bf-ef8b-4fde-bfa6-5423456b8d37">
+            <Label language="EN">saslKerberosServiceName</Label>
+            <Label language="DE">saslKerberosServiceName</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sslTruststoreType</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="146077e3-fce6-40f8-bafc-28ba9b551ee1">
+            <Label language="EN">sslTruststoreType</Label>
+            <Label language="DE">sslTruststoreType</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>metricReporters</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="057fa77a-b2d4-4119-9cc9-b86e3a79c23a">
+            <Label language="EN">metricReporters</Label>
+            <Label language="DE">metricReporters</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sendBufferBytes</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="cf20a15a-2ac5-4704-8363-c5a1a0b35da6">
+            <Label language="EN">sendBufferBytes</Label>
+            <Label language="DE">sendBufferBytes</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>heartbeatIntervalMs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="c53a3af9-1505-4f6a-aacd-415d3d2f9d4f">
+            <Label language="EN">heartbeatIntervalMs</Label>
+            <Label language="DE">heartbeatIntervalMs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>bridgeEndpoint</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:boolean</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="92aec445-5e5e-475e-84ec-d2c2b63fea73">
+            <Label language="EN">bridgeEndpoint</Label>
+            <Label language="DE">bridgeEndpoint</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>consumerStreams</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:integer</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="4f0f2a7b-ff66-47aa-a40a-3ba0327d06a4">
+            <Label language="EN">consumerStreams</Label>
+            <Label language="DE">consumerStreams</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>consumerId</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="79ee4d9c-4735-45db-90be-cf3e191f44dc">
+            <Label language="EN">consumerId</Label>
+            <Label language="DE">consumerId</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sslKeystoreType</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="1a6df7c7-3e2d-430b-aa57-de0e88fdd44e">
+            <Label language="EN">sslKeystoreType</Label>
+            <Label language="DE">sslKeystoreType</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>keySerializerClass</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="d066bfb1-db5b-4474-b624-873e3062249f">
+            <Label language="EN">keySerializerClass</Label>
+            <Label language="DE">keySerializerClass</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>requestRequiredAcks</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="7f9e2267-cce6-4668-b110-7ad7e7f2de40">
+            <Label language="EN">requestRequiredAcks</Label>
+            <Label language="DE">requestRequiredAcks</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>workerPool</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="bf6c71bf-b090-43cd-a0e9-3f21bca1ab36">
+            <Label language="EN">workerPool</Label>
+            <Label language="DE">workerPool</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>fetchWaitMaxMs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="53e2fa99-11f5-4f54-a325-d993b7381c38">
+            <Label language="EN">fetchWaitMaxMs</Label>
+            <Label language="DE">fetchWaitMaxMs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>retries</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="f980aebe-6373-4b2a-94e3-5b4f959550a9">
+            <Label language="EN">retries</Label>
+            <Label language="DE">retries</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sslKeystorePassword</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="c7b16cee-7543-4a13-bde4-a255b69b6283">
+            <Label language="EN">sslKeystorePassword</Label>
+            <Label language="DE">sslKeystorePassword</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sslEndpointAlgorithm</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="8948c464-f1f0-4969-b311-cb692a11e99c">
+            <Label language="EN">sslEndpointAlgorithm</Label>
+            <Label language="DE">sslEndpointAlgorithm</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>topic</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="736afcd6-fcbe-4fa4-bac1-b14450d4a824">
+            <Label language="EN">topic</Label>
+            <Label language="DE">topic</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sslProtocol</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="1b33e31a-52f4-4bf4-a5b6-66cddafea85e">
+            <Label language="EN">sslProtocol</Label>
+            <Label language="DE">sslProtocol</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>keyDeserializer</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="eaec18bc-a22d-42b9-97e3-213a49332c94">
+            <Label language="EN">keyDeserializer</Label>
+            <Label language="DE">keyDeserializer</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sslKeymanagerAlgorithm</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="e30878ec-f139-488e-b044-6342c1988c35">
+            <Label language="EN">sslKeymanagerAlgorithm</Label>
+            <Label language="DE">sslKeymanagerAlgorithm</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>maxBlockMs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="6fdf7338-61e7-4152-867e-749ddefb4fdb">
+            <Label language="EN">maxBlockMs</Label>
+            <Label language="DE">maxBlockMs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>kerberosBeforeReloginMinTime</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="fdfe937f-8a36-4480-b0d3-68ae5cd32256">
+            <Label language="EN">kerberosBeforeReloginMinTime</Label>
+            <Label language="DE">kerberosBeforeReloginMinTime</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>bufferMemorySize</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="651fc1c3-0208-4868-b370-f89cd08a17d6">
+            <Label language="EN">bufferMemorySize</Label>
+            <Label language="DE">bufferMemorySize</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>producerBatchSize</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="93d71666-8fb3-48d2-bd5e-2d96c44c233d">
+            <Label language="EN">producerBatchSize</Label>
+            <Label language="DE">producerBatchSize</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>retryBackoffMs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="3a993469-8cee-4018-9c95-db15931a9e55">
+            <Label language="EN">retryBackoffMs</Label>
+            <Label language="DE">retryBackoffMs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>metadataMaxAgeMs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="812a3c0a-88a7-41c6-bae8-1d684d7f5715">
+            <Label language="EN">metadataMaxAgeMs</Label>
+            <Label language="DE">metadataMaxAgeMs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>configuration</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="b42c4f3b-acc6-4cb1-8785-cc815b713dc7">
+            <Label language="EN">configuration</Label>
+            <Label language="DE">configuration</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sslCipherSuites</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="1e02119b-ea94-4efe-957f-ed0093a1df03">
+            <Label language="EN">sslCipherSuites</Label>
+            <Label language="DE">sslCipherSuites</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>metricsSampleWindowMs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="0020f583-da0e-4543-9e66-392cc9514774">
+            <Label language="EN">metricsSampleWindowMs</Label>
+            <Label language="DE">metricsSampleWindowMs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>fetchMinBytes</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="4db2a9c8-a640-4714-8ce8-584946a01d33">
+            <Label language="EN">fetchMinBytes</Label>
+            <Label language="DE">fetchMinBytes</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sslKeyPassword</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="0c63e13d-3c25-4fcf-83c9-7911a5af98c3">
+            <Label language="EN">sslKeyPassword</Label>
+            <Label language="DE">sslKeyPassword</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>noOfMetricsSample</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="b413eb95-c62e-4134-8bb5-92fea0571a01">
+            <Label language="EN">noOfMetricsSample</Label>
+            <Label language="DE">noOfMetricsSample</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>connectionMaxIdleMs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="b3367878-0a21-4328-8d8f-43cf8de6d588">
+            <Label language="EN">connectionMaxIdleMs</Label>
+            <Label language="DE">connectionMaxIdleMs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>maxPartitionFetchBytes</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="f0e5e6da-16a6-4d94-9ccb-d731782e3500">
+            <Label language="EN">maxPartitionFetchBytes</Label>
+            <Label language="DE">maxPartitionFetchBytes</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>lingerMs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="43dbee8b-e9a0-4cda-b6a4-9f8260143aff">
+            <Label language="EN">lingerMs</Label>
+            <Label language="DE">lingerMs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>securityProtocol</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="a7e03b2b-a1b3-4ed1-9918-1a19ff428ebb">
+            <Label language="EN">securityProtocol</Label>
+            <Label language="DE">securityProtocol</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>kerberosRenewWindowFactor</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="a4cb94f1-12e2-4233-bd34-5c008a79c132">
+            <Label language="EN">kerberosRenewWindowFactor</Label>
+            <Label language="DE">kerberosRenewWindowFactor</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>autoCommitIntervalMs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="9382c290-5017-4bc6-889f-17a2db335782">
+            <Label language="EN">autoCommitIntervalMs</Label>
+            <Label language="DE">autoCommitIntervalMs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sslTruststorePassword</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="9397e790-527b-48ba-828d-083dcfc3699a">
+            <Label language="EN">sslTruststorePassword</Label>
+            <Label language="DE">sslTruststorePassword</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>partitioner</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="40b69c48-c537-4d57-82f4-6ef988fda40e">
+            <Label language="EN">partitioner</Label>
+            <Label language="DE">partitioner</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sslEnabledProtocols</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="82a2b76d-5284-47b3-a7a0-92dc32c49768">
+            <Label language="EN">sslEnabledProtocols</Label>
+            <Label language="DE">sslEnabledProtocols</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sessionTimeoutMs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="dea23957-fcb0-44c0-b7e1-cd8c7076c059">
+            <Label language="EN">sessionTimeoutMs</Label>
+            <Label language="DE">sessionTimeoutMs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sslKeystoreLocation</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="05ad1704-7eef-4515-8b2d-83988dec176f">
+            <Label language="EN">sslKeystoreLocation</Label>
+            <Label language="DE">sslKeystoreLocation</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sslTruststoreLocation</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="20e46baf-20f4-448a-bfdb-f0f758535ab5">
+            <Label language="EN">sslTruststoreLocation</Label>
+            <Label language="DE">sslTruststoreLocation</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>maxInFlightRequest</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="92a0e537-23fc-4c32-af5f-ab3ff09fcebe">
+            <Label language="EN">maxInFlightRequest</Label>
+            <Label language="DE">maxInFlightRequest</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>clientId</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="7721a556-3dd1-4df8-9ac1-0d57f7ff1b27">
+            <Label language="EN">clientId</Label>
+            <Label language="DE">clientId</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>maxRequestSize</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="1796bf84-2b0d-43c4-bb1c-63d17bda122d">
+            <Label language="EN">maxRequestSize</Label>
+            <Label language="DE">maxRequestSize</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>sslTrustmanagerAlgorithm</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="014b4dce-e8c4-47fa-871d-8b07563bcaba">
+            <Label language="EN">sslTrustmanagerAlgorithm</Label>
+            <Label language="DE">sslTrustmanagerAlgorithm</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>autoOffsetReset</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="2580fc40-0a8a-4153-9148-e04d9e231f1b">
+            <Label language="EN">autoOffsetReset</Label>
+            <Label language="DE">autoOffsetReset</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>requestTimeoutMs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="769bf931-53a0-40e8-8c52-1d880e7448c4">
+            <Label language="EN">requestTimeoutMs</Label>
+            <Label language="DE">requestTimeoutMs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>compressionCodec</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="58f60432-4750-4223-9460-15ff7131d71e">
+            <Label language="EN">compressionCodec</Label>
+            <Label language="DE">compressionCodec</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>workerPoolCoreSize</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="bfab479a-3eb0-4fbf-8327-7aa03db4ee3d">
+            <Label language="EN">workerPoolCoreSize</Label>
+            <Label language="DE">workerPoolCoreSize</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>batchSize</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:integer</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="9d2d2291-2610-48df-8798-6441cdcba58f">
+            <Label language="EN">batchSize</Label>
+            <Label language="DE">batchSize</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>checkCrcs</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="5bb02603-f9d6-4d2f-86e8-6d11b9b78d8f">
+            <Label language="EN">checkCrcs</Label>
+            <Label language="DE">checkCrcs</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>autoCommitEnable</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="a7ae5ed8-c86f-4070-95e1-48ced3bbee08">
+            <Label language="EN">autoCommitEnable</Label>
+            <Label language="DE">autoCommitEnable</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+<AttributeMetadata>
+        <Name>partitionAssignor</Name>
+        <Usage>false</Usage>
+        <DataType>xsd:string</DataType>
+        <Length></Length>
+        <isparameterized>true</isparameterized>
+        <GuiLabels guid="3092f89f-549e-479b-99f1-17cbe37148ca">
+            <Label language="EN">partitionAssignor</Label>
+            <Label language="DE">partitionAssignor</Label>
+        </GuiLabels>
+    </AttributeMetadata>
+
+</ComponentMetadata>

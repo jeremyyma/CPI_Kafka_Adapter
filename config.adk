@@ -1,0 +1,7 @@
+#Properties file
+#Tue Nov 05 11:15:47 IST 2019
+Adapter-Name=Kafka
+Adapter-Vendor=ApacheCamel
+Enable-Maven=true
+Adapter-ID=Kafka
+Adapter-Version=2.17.4
