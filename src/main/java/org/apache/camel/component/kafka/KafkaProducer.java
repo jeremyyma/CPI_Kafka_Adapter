@@ -31,6 +31,7 @@ import org.apache.camel.CamelExchangeException;
 import org.apache.camel.Exchange;
 import org.apache.camel.impl.DefaultAsyncProducer;
 import org.apache.kafka.clients.CommonClientConfigs;
+import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -60,6 +61,36 @@ public class KafkaProducer extends DefaultAsyncProducer {
         props.put(SslConfigs.SSL_PROTOCOL_CONFIG, "TLSv1.2");
         props.put(SaslConfigs.SASL_JAAS_CONFIG, "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"J4ODU4BPEWBCQKZU\" password=\"fga4Z2aGeb9zocErtzgLhZBakZ08bTTazrZFlvfGblmPpqgBiZG9lkqzbB1tfzUf\";");
         props.put(SaslConfigs.SASL_MECHANISM, "PLAIN");
+        addPropertyIfNotNull(props, ProducerConfig.MAX_REQUEST_SIZE_CONFIG, endpoint.getConfiguration().getMaxRequestSize());
+        addPropertyIfNotNull(props, ProducerConfig.REQUEST_TIMEOUT_MS_CONFIG, endpoint.getConfiguration().getRequestTimeoutMs()); 
+       
+        /**addPropertyIfNotNull(props, ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, endpoint.getConfiguration().getKeySerializer());
+        addPropertyIfNotNull(props, ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, endpoint.getConfiguration().getValueSerializer());
+        addPropertyIfNotNull(props, ProducerConfig.ACKS_CONFIG, endpoint.getConfiguration().getRequestRequiredAcks());
+        addPropertyIfNotNull(props, ProducerConfig.BUFFER_MEMORY_CONFIG, endpoint.getConfiguration().getBufferMemorySize());
+        addPropertyIfNotNull(props, ProducerConfig.COMPRESSION_TYPE_CONFIG, endpoint.getConfiguration().getCompressionCodec());
+        addPropertyIfNotNull(props, ProducerConfig.RETRIES_CONFIG, endpoint.getConfiguration().getRetries());
+        addPropertyIfNotNull(props, ProducerConfig.INTERCEPTOR_CLASSES_CONFIG, endpoint.getConfiguration().getInterceptorClasses());
+        addPropertyIfNotNull(props, ProducerConfig.BATCH_SIZE_CONFIG, endpoint.getConfiguration().getProducerBatchSize());
+        addPropertyIfNotNull(props, ProducerConfig.CLIENT_ID_CONFIG, endpoint.getConfiguration().getClientId());
+        addPropertyIfNotNull(props, ProducerConfig.CONNECTIONS_MAX_IDLE_MS_CONFIG, endpoint.getConfiguration().getConnectionMaxIdleMs());
+        addPropertyIfNotNull(props, ProducerConfig.LINGER_MS_CONFIG, endpoint.getConfiguration().getLingerMs());
+        addPropertyIfNotNull(props, ProducerConfig.MAX_BLOCK_MS_CONFIG, endpoint.getConfiguration().getMaxBlockMs());
+        addPropertyIfNotNull(props, ProducerConfig.MAX_REQUEST_SIZE_CONFIG, endpoint.getConfiguration().getMaxRequestSize());
+        addPropertyIfNotNull(props, ProducerConfig.PARTITIONER_CLASS_CONFIG, endpoint.getConfiguration().getPartitioner());
+        addPropertyIfNotNull(props, ProducerConfig.RECEIVE_BUFFER_CONFIG, endpoint.getConfiguration().getReceiveBufferBytes());
+        addPropertyIfNotNull(props, ProducerConfig.REQUEST_TIMEOUT_MS_CONFIG, endpoint.getConfiguration().getRequestTimeoutMs());
+        addPropertyIfNotNull(props, ProducerConfig.SEND_BUFFER_CONFIG, endpoint.getConfiguration().getSendBufferBytes());
+        addPropertyIfNotNull(props, ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION, endpoint.getConfiguration().getMaxInFlightRequest());
+        addPropertyIfNotNull(props, ProducerConfig.METADATA_MAX_AGE_CONFIG, endpoint.getConfiguration().getMetadataMaxAgeMs());
+        addPropertyIfNotNull(props, ProducerConfig.METRIC_REPORTER_CLASSES_CONFIG, endpoint.getConfiguration().getMetricReporters());
+        addPropertyIfNotNull(props, ProducerConfig.METRICS_NUM_SAMPLES_CONFIG, endpoint.getConfiguration().getNoOfMetricsSample());
+        addPropertyIfNotNull(props, ProducerConfig.METRICS_SAMPLE_WINDOW_MS_CONFIG, endpoint.getConfiguration().getMetricsSampleWindowMs());
+        addPropertyIfNotNull(props, ProducerConfig.RECONNECT_BACKOFF_MS_CONFIG, endpoint.getConfiguration().getReconnectBackoffMs());
+        addPropertyIfNotNull(props, ProducerConfig.RETRY_BACKOFF_MS_CONFIG, endpoint.getConfiguration().getRetryBackoffMs());
+        //addPropertyIfNotNull(props, ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, isEnableIdempotence());
+        addPropertyIfNotNull(props, ProducerConfig.RECONNECT_BACKOFF_MAX_MS_CONFIG, endpoint.getConfiguration().getReconnectBackoffMaxMs());
+        **/
         endpoint.updateClassProperties(props);
         if (endpoint.getBrokers() != null) {
             props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, endpoint.getBrokers());
@@ -67,7 +98,12 @@ public class KafkaProducer extends DefaultAsyncProducer {
         return props;
     }
 
-
+    private static <T> void addPropertyIfNotNull(Properties props, String key, T value) {
+        if (value != null) {
+            // Kafka expects all properties as String
+            props.put(key, value.toString());
+        }
+    }
     public org.apache.kafka.clients.producer.KafkaProducer getKafkaProducer() {
         return kafkaProducer;
     }

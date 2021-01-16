@@ -19,7 +19,7 @@
 
   
 
-  <artifactId>camel-kafka</artifactId>
+  <artifactId>CPI_Kafka_Adapter</artifactId>
   <packaging>bundle</packaging>
   <name>Camel :: Kafka</name>
   <description>Camel Kafka support</description>
