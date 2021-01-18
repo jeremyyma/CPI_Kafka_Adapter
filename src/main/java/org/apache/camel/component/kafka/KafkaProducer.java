@@ -59,7 +59,7 @@ public class KafkaProducer extends DefaultAsyncProducer {
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, endpoint.getConfiguration().getSerializerClass());
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, endpoint.getConfiguration().getSerializerClass());
         props.put(SslConfigs.SSL_PROTOCOL_CONFIG, "TLSv1.2");
-        props.put(SaslConfigs.SASL_JAAS_CONFIG, "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"J4ODU4BPEWBCQKZU\" password=\"fga4Z2aGeb9zocErtzgLhZBakZ08bTTazrZFlvfGblmPpqgBiZG9lkqzbB1tfzUf\";");
+        //props.put(SaslConfigs.SASL_JAAS_CONFIG, "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"J4ODU4BPEWBCQKZU\" password=\"xxxxx\";");
         props.put(SaslConfigs.SASL_MECHANISM, "PLAIN");
         addPropertyIfNotNull(props, ProducerConfig.MAX_REQUEST_SIZE_CONFIG, endpoint.getConfiguration().getMaxRequestSize());
         addPropertyIfNotNull(props, ProducerConfig.REQUEST_TIMEOUT_MS_CONFIG, endpoint.getConfiguration().getRequestTimeoutMs()); 
