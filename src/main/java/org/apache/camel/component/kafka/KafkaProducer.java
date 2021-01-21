@@ -59,10 +59,12 @@ public class KafkaProducer extends DefaultAsyncProducer {
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, endpoint.getConfiguration().getSerializerClass());
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, endpoint.getConfiguration().getSerializerClass());
         props.put(SslConfigs.SSL_PROTOCOL_CONFIG, "TLSv1.2");
-        //props.put(SaslConfigs.SASL_JAAS_CONFIG, "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"J4ODU4BPEWBCQKZU\" password=\"xxxxx\";");
+        //props.put(SaslConfigs.SASL_JAAS_CONFIG, "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"7V5IZF4W5LTO6OJU\" password=\"QNHHk0WlQTGOUrLut4oXgvNse4041u9H2f/9l6OcYzY7e6hqqMlv1Yb5PDA5bhbg\";");
         props.put(SaslConfigs.SASL_MECHANISM, "PLAIN");
         addPropertyIfNotNull(props, ProducerConfig.MAX_REQUEST_SIZE_CONFIG, endpoint.getConfiguration().getMaxRequestSize());
         addPropertyIfNotNull(props, ProducerConfig.REQUEST_TIMEOUT_MS_CONFIG, endpoint.getConfiguration().getRequestTimeoutMs()); 
+        addPropertyIfNotNull(props, SslConfigs.SSL_PROTOCOL_CONFIG, endpoint.getConfiguration().getSslProtocol());
+        addPropertyIfNotNull(props, SslConfigs.SASL_JAAS_CONFIG,)
        
         /**addPropertyIfNotNull(props, ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, endpoint.getConfiguration().getKeySerializer());
         addPropertyIfNotNull(props, ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, endpoint.getConfiguration().getValueSerializer());
