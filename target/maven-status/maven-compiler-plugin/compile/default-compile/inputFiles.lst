@@ -1,0 +1,15 @@
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/serde/DefaultKafkaHeaderDeserializer.java
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/kafka/KafkaConstants.java
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/kafka/KafkaConsumer.java
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/kafka/KafkaComponent.java
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/kafka/KafkaProducer.java
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/serde/KafkaHeaderSerializer.java
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/serde/KafkaHeaderDeserializer.java
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/kafka/KafkaConfiguration.java
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/kafka/KafkaManualCommitFactory.java
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/kafka/DefaultKafkaManualCommit.java
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/kafka/DefaultKafkaManualCommitFactory.java
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/kafka/KafkaEndpoint.java
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/kafka/KafkaManualCommit.java
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/serde/DefaultKafkaHeaderSerializer.java
+/Users/i817989/git/CPI_Kafka_Adapter/src/main/java/org/apache/camel/component/kafka/KafkaHeaderFilterStrategy.java
